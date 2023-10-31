@@ -18,25 +18,25 @@ import math
 #
 # Operadores
 # | código | operador | argumentos |
-# | 0x01   |   "+"    |     2      |
-# | 0x02   |   "-"    |     2      |
-# | 0x03   |   "*"    |     2      |
-# | 0x04   |   "/"    |     2      |
-# | 0x05   |  "sqrt"  |     1      |
-# | 0x06   |   "pow"  |     2      |
+# | 0x00   |   "+"    |     2      |
+# | 0x01   |   "-"    |     2      |
+# | 0x02   |   "*"    |     2      |
+# | 0x03   |   "/"    |     2      |
+# | 0x04   |  "sqrt"  |     1      |
+# | 0x05   |  "pow"   |     2      |
 # | 0xFF   |  "exit"  |     0      |
 #
 # Tipos de valores
-# 0x1 - int
-# 0x2 - float
+# 0x0 - int
+# 0x1 - float
 
 class Operation(Enum):
-  SUM = 0x01
-  SUB = 0x02
-  MUL = 0x03
-  DIV = 0x04
-  SQRT = 0x05
-  POW = 0x06
+  SUM = 0x00
+  SUB = 0x01
+  MUL = 0x02
+  DIV = 0x03
+  SQRT = 0x04
+  POW = 0x05
   EXIT = 0xFF
 
   __ARGS = {

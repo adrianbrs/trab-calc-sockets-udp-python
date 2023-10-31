@@ -20,12 +20,12 @@
 ## Operadores
 
 | código | operador | argumentos |
-| 0x01   |   "+"    |     2      |
-| 0x02   |   "-"    |     2      |
-| 0x03   |   "*"    |     2      |
-| 0x04   |   "/"    |     2      |
-| 0x05   |  "sqrt"  |     1      |
-| 0x06   |  "pow"   |     2      |
+| 0x00   |   "+"    |     2      |
+| 0x01   |   "-"    |     2      |
+| 0x02   |   "*"    |     2      |
+| 0x03   |   "/"    |     2      |
+| 0x04   |  "sqrt"  |     1      |
+| 0x05   |  "pow"   |     2      |
 | 0xFF   |  "exit"  |     0      |
 
 ## Tipos de valores

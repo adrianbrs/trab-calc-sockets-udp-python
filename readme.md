@@ -70,32 +70,32 @@
     <th align="center">argumentos</th>
   </tr>
   <tr>
-    <td align="center"><code>0x01</code></td>
+    <td align="center"><code>0x00</code></td>
     <td align="center"><code>+</code></td>
     <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td align="center"><code>0x02</code></td>
+    <td align="center"><code>0x01</code></td>
     <td align="center"><code>-</code></td>
     <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td align="center"><code>0x03</code></td>
+    <td align="center"><code>0x02</code></td>
     <td align="center"><code>*</code></td>
     <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td align="center"><code>0x04</code></td>
+    <td align="center"><code>0x03</code></td>
     <td align="center"><code>/</code></td>
     <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td align="center"><code>0x05</code></td>
+    <td align="center"><code>0x04</code></td>
     <td align="center"><code>sqrt</code></td>
     <td align="center"><code>1</code></td>
   </tr>
   <tr>
-    <td align="center"><code>0x06</code></td>
+    <td align="center"><code>0x05</code></td>
     <td align="center"><code>pow</code></td>
     <td align="center"><code>2</code></td>
   </tr>
