@@ -29,8 +29,8 @@
 | 0xFF   |  "exit"  |     0      |
 
 ## Tipos de valores
-0x1 - int
-0x2 - float
+0x0 - int
+0x1 - float
 
 # Entrada
 <operador> <valor1> [<valor2>, ...]

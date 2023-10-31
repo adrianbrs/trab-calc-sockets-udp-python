@@ -117,11 +117,11 @@
     <th align="center">tipo</th>
   </tr>
   <tr>
-    <td align="center"><code>0x1</code></td>
+    <td align="center"><code>0x0</code></td>
     <td align="center"><code>int</code></td>
   </tr>
   <tr>
-    <td align="center"><code>0x2</code></td>
+    <td align="center"><code>0x1</code></td>
     <td align="center"><code>float</code></td>
   </tr>
 </table>
