@@ -1,3 +1,6 @@
+# Calculadora com sockets - UPF 2023/2
+> Trabalho da disciplina de Ubiquitous Computing envolvendo Socket UDP em Python
+
 # Empacotamento dos dados
 
 ## Mensagem de entrada
@@ -10,7 +13,7 @@
 
 ## Mensagem de saída
 |----------------------- max 17 bytes ------------------------|
-|---------- byte 1 ------------|--------- byte 2+n1 ----------|
+|---------- byte 0 ------------|--------- byte 1+n1 ----------|
 |  tipo val 1   |       n1     |           valor 1            |
 |------------------------------|------------------------------|
 
@@ -26,8 +29,8 @@
 | 0xFF   |  "exit"  |     0      |
 
 ## Tipos de valores
-0b0001 - int
-0b0002 - float
+0x1 - int
+0x2 - float
 
 # Entrada
 <operador> <valor1> [<valor2>, ...]
