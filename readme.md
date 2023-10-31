@@ -4,51 +4,38 @@
 
 ## Empacotamento dos dados
 
-<style>
-table {
-  width: 100%;
-}
-table th, table td {
-  border: 1px solid currentColor !important;
-  border-collapse: collapse;
-}
-table th, table td {
-  text-align: center;
-}
-</style>
-
 ### Mensagem de entrada (request)
 
 <table>
   <tr>
-    <th colspan="5"><a href="./encoder.py#L121">IncomingMessage</a></th>
+    <th colspan="5" align="center"><a href="./encoder.py#L121">IncomingMessage</a></th>
   </tr>
   <tr>
-    <td colspan="5">max 35 bytes</td>
+    <td colspan="5" align="center">max 35 bytes</td>
   </tr>
   <tr>
     <td colspan="3"></td>
-    <td colspan="2">(opcional conforme operador)</td>
+    <td colspan="2" align="center">(opcional conforme operador)</td>
   </tr>
   <tr>
-    <td colspan="2">2 bytes</td>
-    <td>max 16 bytes</td>
-    <td>1 byte</td>
-    <td>max 16 bytes</td>
+    <td colspan="2" align="center">2 bytes</td>
+    <td align="center">max 16 bytes</td>
+    <td align="center">1 byte</td>
+    <td align="center">max 16 bytes</td>
   </tr>
   <tr>
-    <td>byte 0</td>
-    <td>byte 1</td>
-    <td>byte 2+n1</td>
-    <td>byte 2+n1+1</td>
-    <td>byte 2+n1+1+n2</td>
+    <td align="center">byte 0</td>
+    <td align="center">byte 1</td>
+    <td align="center">byte 2+n1</td>
+    <td align="center">byte 2+n1+1</td>
+    <td align="center">byte 2+n1+1+n2</td>
   </tr>
   <tr>
-    <td>operador</td>
-    <td>tipo val 1 | n1</td>
-    <td>valor 1</td>
-    <td>tipo val 2 | n2</td>
-    <td>valor 2</td>
+    <td align="center">operador</td>
+    <td align="center">tipo val 1 | n1</td>
+    <td align="center">valor 1</td>
+    <td align="center">tipo val 2 | n2</td>
+    <td align="center">valor 2</td>
   </tr>
 </table>
 
@@ -56,18 +43,18 @@ table th, table td {
 
 <table>
   <tr>
-    <th colspan="2"><a href="./encoder.py#L158">OutgoingMessage</a></th>
+    <th colspan="2" align="center"><a href="./encoder.py#L158">OutgoingMessage</a></th>
   </tr>
   <tr>
-    <td colspan="2">max 17 bytes</td>
+    <td colspan="2" align="center">max 17 bytes</td>
   </tr>
   <tr>
-    <td>byte 0</td>
-    <td>byte 1+n1</td>
+    <td align="center">byte 0</td>
+    <td align="center">byte 1+n1</td>
   </tr>
   <tr>
-    <td>tipo val 1 | n1</td>
-    <td>valor 1</td>
+    <td align="center">tipo val 1 | n1</td>
+    <td align="center">valor 1</td>
   </tr>
 </table>
 
@@ -75,47 +62,47 @@ table th, table td {
 
 <table>
   <tr>
-    <th colspan="3"><a href="./encoder.py#L33">Operation</a></th>
+    <th colspan="3" align="center"><a href="./encoder.py#L33">Operation</a></th>
   </tr>
   <tr>
-    <th>código</th>
-    <th>operação</th>
-    <th>argumentos</th>
+    <th align="center">código</th>
+    <th align="center">operação</th>
+    <th align="center">argumentos</th>
   </tr>
   <tr>
-    <td><code>0x01</code></td>
-    <td><code>+</code></td>
-    <td><code>2</code></td>
+    <td align="center"><code>0x01</code></td>
+    <td align="center"><code>+</code></td>
+    <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td><code>0x02</code></td>
-    <td><code>-</code></td>
-    <td><code>2</code></td>
+    <td align="center"><code>0x02</code></td>
+    <td align="center"><code>-</code></td>
+    <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td><code>0x03</code></td>
-    <td><code>*</code></td>
-    <td><code>2</code></td>
+    <td align="center"><code>0x03</code></td>
+    <td align="center"><code>*</code></td>
+    <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td><code>0x04</code></td>
-    <td><code>/</code></td>
-    <td><code>2</code></td>
+    <td align="center"><code>0x04</code></td>
+    <td align="center"><code>/</code></td>
+    <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td><code>0x05</code></td>
-    <td><code>sqrt</code></td>
-    <td><code>1</code></td>
+    <td align="center"><code>0x05</code></td>
+    <td align="center"><code>sqrt</code></td>
+    <td align="center"><code>1</code></td>
   </tr>
   <tr>
-    <td><code>0x06</code></td>
-    <td><code>pow</code></td>
-    <td><code>2</code></td>
+    <td align="center"><code>0x06</code></td>
+    <td align="center"><code>pow</code></td>
+    <td align="center"><code>2</code></td>
   </tr>
   <tr>
-    <td><code>0xFF</code></td>
-    <td><code>exit</code></td>
-    <td><code>0</code></td>
+    <td align="center"><code>0xFF</code></td>
+    <td align="center"><code>exit</code></td>
+    <td align="center"><code>0</code></td>
   </tr>
 </table>
 
@@ -123,19 +110,19 @@ table th, table td {
 
 <table>
   <tr>
-    <th colspan="2"><a href="./encoder.py#L58">ValueType</a></th>
+    <th colspan="2" align="center"><a href="./encoder.py#L58">ValueType</a></th>
   </tr>
   <tr>
-    <th>código</th>
-    <th>tipo</th>
+    <th align="center">código</th>
+    <th align="center">tipo</th>
   </tr>
   <tr>
-    <td><code>0x1</code></td>
-    <td><code>int</code></td>
+    <td align="center"><code>0x1</code></td>
+    <td align="center"><code>int</code></td>
   </tr>
   <tr>
-    <td><code>0x2</code></td>
-    <td><code>float</code></td>
+    <td align="center"><code>0x2</code></td>
+    <td align="center"><code>float</code></td>
   </tr>
 </table>
 
