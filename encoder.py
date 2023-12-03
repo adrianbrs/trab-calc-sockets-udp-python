@@ -37,6 +37,7 @@ class Operation(Enum):
   DIV = 0x03
   SQRT = 0x04
   POW = 0x05
+  LOG = 0x06
   EXIT = 0xFF
 
   __ARGS = {
@@ -46,6 +47,7 @@ class Operation(Enum):
     "DIV": 2,
     "SQRT": 1,
     "POW": 2,
+    "LOG": 2,
     "EXIT": 0
   }
 

@@ -26,6 +26,7 @@
 | 0x03   |   "/"    |     2      |
 | 0x04   |  "sqrt"  |     1      |
 | 0x05   |  "pow"   |     2      |
+| 0x06   |  "log"   |     2      |
 | 0xFF   |  "exit"  |     0      |
 
 ## Tipos de valores

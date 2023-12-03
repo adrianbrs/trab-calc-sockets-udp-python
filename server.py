@@ -19,6 +19,7 @@ class Calculator:
       Operation.DIV: self.div,
       Operation.SQRT: self.sqrt,
       Operation.POW: self.pow,
+      Operation.LOG: self.log
     }
 
   def calc(self, operation: Operation, values: list[int | float]):
@@ -41,6 +42,9 @@ class Calculator:
   
   def pow(self, v1, v2):
     return v1 ** v2
+  
+  def log(self, v1, v2):
+    return math.log(v1, v2)
   
 calculator = Calculator()
 

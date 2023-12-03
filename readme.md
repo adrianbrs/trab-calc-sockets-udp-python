@@ -100,6 +100,11 @@
     <td align="center"><code>2</code></td>
   </tr>
   <tr>
+    <td align="center"><code>0x06</code></td>
+    <td align="center"><code>log</code></td>
+    <td align="center"><code>2</code></td>
+  </tr>
+  <tr>
     <td align="center"><code>0xFF</code></td>
     <td align="center"><code>exit</code></td>
     <td align="center"><code>0</code></td>

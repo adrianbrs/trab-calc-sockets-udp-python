@@ -17,6 +17,7 @@ op_symbol_map = {
   "/": Operation.DIV,
   "sqrt": Operation.SQRT,
   "pow": Operation.POW,
+  "log": Operation.LOG
 }
 
 def get_request(user_input: str):
