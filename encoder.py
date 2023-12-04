@@ -40,22 +40,21 @@ class Operation(Enum):
   LOG = 0x06
   EXIT = 0xFF
 
-  __ARGS = {
-    "SUM": 2,
-    "SUB": 2,
-    "MUL": 2,
-    "DIV": 2,
-    "SQRT": 1,
-    "POW": 2,
-    "LOG": 2,
-    "EXIT": 0
-  }
-
   def get_code(self) -> int:
     return self.value
   
   def get_args(self) -> int:
-    return self.__ARGS[self.name]
+    args = {
+      "SUM": 2,
+      "SUB": 2,
+      "MUL": 2,
+      "DIV": 2,
+      "SQRT": 1,
+      "POW": 2,
+      "LOG": 2,
+      "EXIT": 0
+    }
+    return args[self.name]
 
 class ValueType(Enum):
   INT = 0x0
