@@ -81,8 +81,8 @@ try:
       print("Response sent")
 
     except Exception as e:
-      print("Erro ao decodificar a mensagem", e)
-      udp.sendto("Erro ao decodificar a mensagem".encode(), attr)
+      print("Erro ao decodificar a mensagem:", e)
+      udp.sendto(str(e).encode(), attr)
       continue
 
 except KeyboardInterrupt:

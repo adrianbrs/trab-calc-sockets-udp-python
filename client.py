@@ -24,7 +24,7 @@ def get_request(user_input: str):
   op_symbol, *values = user_input.split(" ")
 
   if op_symbol not in op_symbol_map:
-    raise ValueError("Operação inválida:", op_symbol)
+    raise ValueError("Operação inválida: " + op_symbol)
 
   operation = op_symbol_map[op_symbol]
 
@@ -39,24 +39,29 @@ print("Para fechar o servidor, digite 'exit'")
 print("")
 print("Digite a operação no formato: <operador> <valor1> [<valor2>, ...]")
 
-# Cria uma requisição baseado na entrada do usuário
-request = get_request(input("> "))
+try:
+  # Cria uma requisição baseado na entrada do usuário
+  request = get_request(input("> "))
 
-# Envia a mensagem para o servidor
-udp.sendto(request.encode(), server)
+  # Envia a mensagem para o servidor
+  udp.sendto(request.encode(), server)
 
-# Comando para encerrar o servidor
-if request.operation == Operation.EXIT:
-  print("Servidor fechado")
-  udp.close()
-  exit()
+  # Comando para encerrar o servidor
+  if request.operation == Operation.EXIT:
+    print("Servidor fechado")
+    udp.close()
+    exit()
 
-# Aguarda a resposta do servidor
-raw_response = udp.recv(OutgoingMessage.get_max_bytes())
+  # Aguarda a resposta do servidor
+  raw_response = udp.recv(OutgoingMessage.get_max_bytes())
 
-# Decodifica a resposta do servidor
-response = OutgoingMessage.decode(raw_response)
-
-print("Resultado:", response.value)
+  # Decodifica a resposta do servidor
+  try:
+    response = OutgoingMessage.decode(raw_response)
+    print("Resultado:", response.value)
+  except:
+    print("Erro:", raw_response.decode())
+except Exception as e:
+  print("Erro:", e)
 
 udp.close()
