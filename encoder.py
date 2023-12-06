@@ -130,7 +130,8 @@ class IncomingMessage:
     arr = bytearray([code])
 
     if len(self.values) != args:
-      raise ValueError("Número de argumentos inválido")
+      arg_names = [f"valor{i + 1}" for i in range(args)]
+      raise ValueError(f"Número de argumentos inválido, utilize: <{'> <'.join(arg_names)}>")
 
     for i in range(args):
       value = self.values[i]
