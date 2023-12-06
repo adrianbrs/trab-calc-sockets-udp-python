@@ -20,11 +20,20 @@ op_symbol_map = {
   "log": Operation.LOG
 }
 
+available_operations = [op for op in op_symbol_map.keys() if op != "exit"]
+
 def get_request(user_input: str):
   op_symbol, *values = user_input.split(" ")
 
   if op_symbol not in op_symbol_map:
-    raise ValueError("Operação inválida: " + op_symbol)
+    err_msg = f"Operação inválida: {op_symbol}\n\n";
+    err_msg += "Operações disponíveis:\n"
+
+    for op in available_operations:
+      op_values = [f"value{i+1}" for i in range(op_symbol_map[op].get_args())];
+      err_msg += f"  {op} <{'> <'.join(op_values)}>\n"
+
+    raise ValueError(err_msg)
 
   operation = op_symbol_map[op_symbol]
 
@@ -34,10 +43,10 @@ def get_request(user_input: str):
   return IncomingMessage(operation, values)
 
 print("# Calculadora #")
-print("Operações disponíveis:", ", ".join(op_symbol_map.keys()))
-print("Para fechar o servidor, digite 'exit'")
+print("Operações disponíveis:", ", ".join(available_operations))
+print("Para fechar o servidor e sair, digite 'exit'")
 print("")
-print("Digite a operação no formato: <operador> <valor1> [<valor2>, ...]")
+print("Digite a operação no formato: <operador> [<valor> ...]")
 
 try:
   # Cria uma requisição baseado na entrada do usuário
